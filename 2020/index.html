@@ -1,0 +1,749 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2021-12-25 Sat 17:57 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>计组芝士点</title>
+<meta name="author" content="John Doe" />
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+</style>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">计组芝士点</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#orgf30aa6b">1. <span class="todo TODO">TODO</span> LIST</a></li>
+<li><a href="#org7e90e65">2. 习题专题</a>
+<ul>
+<li><a href="#org3ece2c4">2.1. PPT 内容</a></li>
+<li><a href="#orgea8452f">2.2. 书上例题</a></li>
+</ul>
+</li>
+<li><a href="#org22f7118">3. 涉及计算的部分</a></li>
+<li><a href="#org3302e9c">4. Chp1</a></li>
+<li><a href="#orgf30a754">5. Chp2</a></li>
+<li><a href="#org140cede">6. Chp3</a></li>
+<li><a href="#org19446c9">7. Chp4 指令系统</a></li>
+<li><a href="#org95b6ebe">8. Chp5 中央处理器</a></li>
+<li><a href="#org4302b21">9. Chp6 总线系统</a></li>
+<li><a href="#orgca19bde">10. Chp7 外围设备</a></li>
+<li><a href="#org886ed0c">11. Chp8 输入/输出系统</a></li>
+</ul>
+</div>
+</div>
+<p>
+例题(PPT 上的, 书上的非常重要)
+</p>
+
+<div id="outline-container-orgf30aa6b" class="outline-2">
+<h2 id="orgf30aa6b"><span class="section-number-2">1.</span> <span class="todo TODO">TODO</span> LIST</h2>
+<div class="outline-text-2" id="text-1">
+<ul class="org-ul">
+<li class="off"><code>[&#xa0;]</code> 背诵记忆</li>
+<li class="off"><code>[&#xa0;]</code> Trebor 的方法</li>
+<li class="off"><code>[&#xa0;]</code> 补足 各个 Chp 和详细内容</li>
+<li class="off"><code>[&#xa0;]</code> 整理 PPT/书上习题/例题</li>
+<li class="off"><code>[&#xa0;]</code> 看计算方法和计算公式</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org7e90e65" class="outline-2">
+<h2 id="org7e90e65"><span class="section-number-2">2.</span> 习题专题</h2>
+<div class="outline-text-2" id="text-2">
+<ul class="org-ul">
+<li>冯机的主要设计思想是什么? 有那几个组成部分?</li>
+<li>什么是储存容量? 什么是单元地址? 什么是数据字? 什么是指令字?</li>
+<li>什么是指令? 什么是程序?</li>
+</ul>
+</div>
+
+
+<div id="outline-container-org3ece2c4" class="outline-3">
+<h3 id="org3ece2c4"><span class="section-number-3">2.1.</span> PPT 内容</h3>
+<div class="outline-text-3" id="text-2-1">
+<p>
+看 THEOL 的 PPT
+</p>
+</div>
+</div>
+<div id="outline-container-orgea8452f" class="outline-3">
+<h3 id="orgea8452f"><span class="section-number-3">2.2.</span> 书上例题</h3>
+</div>
+</div>
+
+<div id="outline-container-org22f7118" class="outline-2">
+<h2 id="org22f7118"><span class="section-number-2">3.</span> 涉及计算的部分</h2>
+<div class="outline-text-2" id="text-3">
+<ul class="org-ul">
+<li>进制转换反码 补码 浮点数</li>
+<li>容量扩充 P68</li>
+<li>储存器带宽计算 P90</li>
+<li>Cache 的命中率计算</li>
+<li>Cache 的地址映射</li>
+<li></li>
+</ul>
+</div>
+</div>
+
+
+
+<div id="outline-container-org3302e9c" class="outline-2">
+<h2 id="org3302e9c"><span class="section-number-2">4.</span> Chp1</h2>
+<div class="outline-text-2" id="text-4">
+<ul class="org-ul">
+<li>P5 计算机的性能指标</li>
+<li>P8-P12
+<dl class="org-dl">
+<dt>ALU</dt><dd>算术逻辑单元</dd>
+<dt>存储容量</dt><dd></dd>
+
+<dt>(no term)</dt><dd>外存, 别名辅存; 内存, 别名主存</dd>
+<dt>冯结构</dt><dd>指令和数据放在同一个存储器</dd>
+<dt>哈佛结构</dt><dd>指令和数据分别放在两个存储器</dd>
+<dt>取指周期</dt><dd></dd>
+
+<dt>执行周期</dt><dd></dd>
+
+<dt>字长</dt><dd></dd>
+
+<dt>计算机软件两大类</dt><dd>系统程序/应用程序</dd>
+</dl></li>
+<li>P16
+4 | 5 | 6</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgf30a754" class="outline-2">
+<h2 id="orgf30a754"><span class="section-number-2">5.</span> Chp2</h2>
+<div class="outline-text-2" id="text-5">
+<ul class="org-ul">
+<li>原码 | 补码</li>
+<li>P22 浮点数
+<ol class="org-ol">
+<li>求阶码 (2.9)</li>
+<li>例 2.5</li>
+<li>例 2.12 例 2.13</li>
+<li>(2.14)</li>
+<li>(2.18)</li>
+<li>例 2.14 例 2.15</li>
+</ol></li>
+<li>P43
+<ul class="org-ul">
+<li>逻辑运算</li>
+</ul></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org140cede" class="outline-2">
+<h2 id="org140cede"><span class="section-number-2">6.</span> Chp3</h2>
+<div class="outline-text-2" id="text-6">
+<ul class="org-ul">
+<li>P63
+<dl class="org-dl">
+<dt>内存</dt><dd></dd>
+
+<dt>外存</dt><dd></dd>
+
+<dt>高速缓存(cache)</dt><dd></dd>
+
+<dt>它们的作用</dt><dd></dd>
+
+<dt>分别解决的问题</dt><dd></dd>
+
+<dt>存取分类</dt><dd>存取方式 | 读写功能 | 信息易失性</dd>
+<dt>存取器技术指标</dt><dd></dd>
+</dl></li>
+<li>P68
+<ul class="org-ul">
+<li>例题 3.1</li>
+</ul></li>
+<li>P76
+<dl class="org-dl">
+<dt>SDRAM</dt><dd>双倍数据率的 DDR SDRAM</dd>
+<dt>C(ached)DRAM</dt><dd>附带高速缓冲储存器的动态存储器</dd>
+</dl></li>
+<li>P80
+<dl class="org-dl">
+<dt>可编程 ROM</dt><dd>PROM</dd>
+<dt>紫外擦除的 PROM</dt><dd>EPROM</dd>
+<dt>电可擦 PROM</dt><dd>E<sup>2PROM</sup></dd>
+<dt>闪存</dt><dd>Flash</dd>
+</dl></li>
+<li>P90
+<ul class="org-ul">
+<li>例 3.3</li>
+</ul></li>
+<li>P92 cache
+<dl class="org-dl">
+<dt>cache 拿来解决的问题</dt><dd>解决 CPU 和主存间速度不匹配的问题</dd>
+<dt>cache 的命中率及其计算</dt><dd><ul class="org-ul">
+<li>公式</li>
+<li>例 3.4</li>
+</ul></dd>
+</dl></li>
+<li>P94 主存与 cache 的地址映射方式
+<ul class="org-ul">
+<li>全相联映射方式</li>
+<li>直接映射方式</li>
+<li>组相联映射方式</li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org19446c9" class="outline-2">
+<h2 id="org19446c9"><span class="section-number-2">7.</span> Chp4 指令系统</h2>
+<div class="outline-text-2" id="text-7">
+<ul class="org-ul">
+<li>P118
+<ul class="org-ul">
+<li>计算机的程序: 是由一系列的机器指令组成的.</li>
+<li id="精简指令集计算机">RISC</li>
+<li id="复杂指令集计算机">CISC</li>
+<li>用一句话概括指令系统的各个性能要求
+<dl class="org-dl">
+<dt>完备性</dt><dd>汇编语言编写各类程序时, 指令系统的指令就足够使用而不必依赖其它软件实现.</dd>
+<dt>有效性</dt><dd>用这套指令系统编写的程序能高效率运行</dd>
+<dt>规整性</dt><dd>对称性, 匀齐性, &#x2026;一致性</dd>
+<dt>兼容性</dt><dd>对于相同架构的基本指令系统的机器, 可以做到向上兼容.</dd>
+</dl></li>
+</ul></li>
+<li>P120 指令格式
+<dl class="org-dl">
+<dt>指令字(另一个称呼是 <b>指令</b>)</dt><dd>表示一条指令的机器字就叫做指令字</dd>
+<dt>(no term)</dt><dd>二地址指令格式的三种按操作数的物理位置分类
+<ul class="org-ul">
+<li>存储器存储器(SS)</li>
+<li>寄存器寄存器(RR)</li>
+<li>寄存器存储器(RS)</li>
+</ul></dd>
+<dt>指令长度</dt><dd>一个指令字中包含的二进制代码的位数称为指令长度</dd>
+<dt>机器字长</dt><dd>计算机能直接处理的二进制数据的位数称为机器字长</dd>
+</dl></li>
+<li>P128 指令和数据的寻址方式
+<ul class="org-ul">
+<li>在储存器中, 操作数和指令的写入读出方式有三种:
+<ul class="org-ul">
+<li>地址指定方式</li>
+<li>相联存储方式</li>
+<li>堆栈存取方式</li>
+</ul></li>
+<li id="寻址方式">当采用地址指定方式时, 形成操作数或指令地址的方式, 称为寻址方式.</li>
+<li>两种指令寻址方式
+<ul class="org-ul">
+<li>顺序寻址方式</li>
+<li id="跳跃寻址方式">所谓跳跃, 是指下条指令的地址码不是由程序计数器(PC)给出, 而是由本条指令给出</li>
+</ul></li>
+<li>考 PPT 给的题型</li>
+</ul></li>
+<li>P135 指令的分类
+<ul class="org-ul">
+<li>一个完整的指令系统, 有四大类指令:
+<ul class="org-ul">
+<li>数据处理</li>
+<li>数据存储</li>
+<li>数据传送</li>
+<li>数据控制</li>
+</ul></li>
+<li>具体有八类:
+<ul class="org-ul">
+<li>数据传送指令</li>
+<li>算术运算指令</li>
+<li>逻辑运算指令</li>
+<li>程序控制类指令</li>
+<li>输入输出指令</li>
+<li>字符串类指令</li>
+<li>系统控制指令</li>
+</ul></li>
+</ul></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org95b6ebe" class="outline-2">
+<h2 id="org95b6ebe"><span class="section-number-2">8.</span> Chp5 中央处理器</h2>
+<div class="outline-text-2" id="text-8">
+<ul class="org-ul">
+<li>P145 CPU 的功能和组成</li>
+<li>CPU 的功能
+<dl class="org-dl">
+<dt>中央处理器</dt><dd>CPU</dd>
+<dt>(no term)</dt><dd>CPU 的四个基本功能(<b>需要简短解释</b>):
+<dl class="org-dl">
+<dt>指令控制</dt><dd>控制程序指令的执行顺序</dd>
+<dt>操作控制</dt><dd></dd>
+
+<dt>时间控制</dt><dd></dd>
+
+<dt>数据加工</dt><dd></dd>
+</dl></dd>
+</dl></li>
+<li>CPU 的组成
+<ul class="org-ul">
+<li>CPU 的两个核心组成:
+<ol class="org-ol">
+<li>运算器</li>
+<li>控制器</li>
+</ol></li>
+<li>运算器的组成:
+<ol class="org-ol">
+<li>算术逻辑单元(ALU)</li>
+<li>通用寄存器</li>
+<li>数据缓冲寄存器</li>
+<li>程序状态字寄存器</li>
+</ol></li>
+<li>控制器而核心组成:
+<ol class="org-ol">
+<li>程序计数器</li>
+<li>指令寄存器</li>
+<li>指令译码器</li>
+<li>时序产生器</li>
+<li>操作控制器</li>
+</ol></li>
+</ul></li>
+<li>P148 指令周期
+<dl class="org-dl">
+<dt>指令周期</dt><dd>指令周期是取出一条指令并执行这条指令需要的时间</dd>
+</dl></li>
+<li>P160 时序信号
+<ul class="org-ul">
+<li>硬布线控制器中时序信号采用什么体制?
+<ul class="org-ul">
+<li>主状态周期-节拍电位-节拍脉冲 的三级体制</li>
+</ul></li>
+<li>主微程序控制器中时序信号采用什么体制?
+<ul class="org-ul">
+<li>节拍电位-节拍脉冲 的二级体制</li>
+</ul></li>
+</ul></li>
+<li>P176 流水 CPU 的三种并行处理形式
+<ul class="org-ul">
+<li>时间并行</li>
+<li>空间并行</li>
+<li>时间并行+空间并行</li>
+</ul></li>
+<li>P180 精简指令集(RISC)计算机的 <b>三要素</b>:
+<ul class="org-ul">
+<li>一个有限的简单的指令系统</li>
+<li>CPU 配备大量的通用寄存器</li>
+<li>强调对指令流水线的优化</li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org4302b21" class="outline-2">
+<h2 id="org4302b21"><span class="section-number-2">9.</span> Chp6 总线系统</h2>
+<div class="outline-text-2" id="text-9">
+<ul class="org-ul">
+<li>P189 总线的基本概念
+<dl class="org-dl">
+<dt>概念</dt><dd>总线是构成计算机系统的互联机构, 是多个系统功能部件之间进行数据传送的公共通路.</dd>
+<dt>(no term)</dt><dd>一个单机拥有的三大类总线:
+<dl class="org-dl">
+<dt>内部总线</dt><dd>CPU 内部连接各寄存器和运算部件之间的总线</dd>
+<dt>系统总线</dt><dd>CPU 同计算机系统的其他告诉功能部件间的总线</dd>
+<dt>I/O 总线</dt><dd>中/低速 I/O 设备之间互相连接的总线</dd>
+</dl></dd>
+<dt>衡量总线性能的重要指标</dt><dd>总线的带宽</dd>
+<dt>桥是什么</dt><dd>桥是一种具有缓冲, 转换, 控制功能的逻辑电路</dd>
+</dl></li>
+<li>P191 早期总线
+<ul class="org-ul">
+<li>早期总线按照功能分类, 可分为三类:
+<ul class="org-ul">
+<li>地址线</li>
+<li>数据线</li>
+<li>控制线</li>
+</ul></li>
+</ul></li>
+<li>P193
+<ul class="org-ul">
+<li>数据传送总线的组成:
+<ul class="org-ul">
+<li>地址线</li>
+<li>数据线</li>
+<li>控制线</li>
+</ul></li>
+<li>仲裁总线的组成:
+<ul class="org-ul">
+<li>总线请求线</li>
+<li>总线授权线</li>
+</ul></li>
+</ul></li>
+<li>P194-195
+<dl class="org-dl">
+<dt>CPU 总线又称</dt><dd>CPU-存储器总线</dd>
+<dt>PCI 总线用于连接</dt><dd>高速的 I/O 设备模块</dd>
+<dt>ISA 总线用于连接</dt><dd>低速的 I/O 设备</dd>
+<dt>北桥用于连接</dt><dd>CPU 总线和 PCI 总线</dd>
+<dt>南桥用于连接</dt><dd>PCI 总线和 ISA 总线</dd>
+</dl></li>
+<li>P195
+<ul class="org-ul">
+<li>计算机系统中, 两种传输信息的方式
+<ul class="org-ul">
+<li>串行传递</li>
+<li>并行传递</li>
+</ul></li>
+<li id="外围设备都有 <b>设备控制器</b>, 它的作用">控制外围设备进行操作的控制部件, 通过 I/O 接口接收来自 CPU 传送的各种信息, 或者根据设备的需求将信息传送到设备, 或者从设备中读到信息送到 I/O 接口.</li>
+<li>一个标准的 I/O 接口具有的功能:
+<ol class="org-ol">
+<li>控制</li>
+<li>缓冲</li>
+<li>状态</li>
+<li>转换</li>
+<li>整理</li>
+<li>程序中断</li>
+</ol></li>
+<li>按照总线仲裁电路的位置不同, 仲裁方式分为:
+<ol class="org-ol">
+<li>集中式仲裁</li>
+<li>分布式仲裁</li>
+</ol></li>
+</ul></li>
+<li>P200
+<dl class="org-dl">
+<dt>独力请求方式的优点</dt><dd>响应时间快</dd>
+<dt>(no term)</dt><dd>分布式仲裁不需要集中的总线仲裁器, 每个潜在的主力功能模块都有自己的仲裁号和仲裁器.</dd>
+<dt>(no term)</dt><dd>总线的一次信息传送过程有 <b>五个</b> 阶段:
+<ul class="org-ul">
+<li>请求总线</li>
+<li>总线仲裁</li>
+<li>寻址(目的地址)</li>
+<li>消息传送</li>
+<li>状态返回(错误报告)</li>
+</ul></dd>
+<dt>定时</dt><dd>指事件出现在总线上的时序关系</dd>
+</dl></li>
+<li>P205 PCI/PCIe 总线
+<dl class="org-dl">
+<dt>PCI 总线的作用</dt><dd>连接各种高速的 PCI 设备</dd>
+</dl></li>
+<li>P213 课后习题
+<ul class="org-ul">
+<li>第 8 题</li>
+<li>第 9 题</li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgca19bde" class="outline-2">
+<h2 id="orgca19bde"><span class="section-number-2">10.</span> Chp7 外围设备</h2>
+<div class="outline-text-2" id="text-10">
+<ul class="org-ul">
+<li>P215 外围设备
+<dl class="org-dl">
+<dt>外围设备</dt><dd>除了 CPU 和主存外的每一个计算机的部分都可作为外围</dd>
+<dt>(no term)</dt><dd>外围设备由三部分组成:
+<ul class="org-ul">
+<li>存储介质</li>
+<li>驱动装置</li>
+<li>控制电路</li>
+</ul></dd>
+<dt>(no term)</dt><dd>外围设备分为 <b>五大类</b>:
+<ul class="org-ul">
+<li>输入设备</li>
+<li>输出设备</li>
+<li>外存设备</li>
+<li>数据通信设备</li>
+<li>过程控制设备</li>
+</ul></dd>
+<dt>(no term)</dt><dd>重要: 每种外围设备, 都是在它自己的设备控制器控制下进行工作的, 而设备控制器则通过 I/O 接口和主机连接, 并受主机控制.</dd>
+</dl></li>
+<li>P219 磁盘
+<dl class="org-dl">
+<dt>硬磁盘是</dt><dd>指记录介质为硬质圆形盘片的磁表面存储器.</dd>
+<dt>(no term)</dt><dd>磁盘大小的计算公式</dd>
+</dl></li>
+<li>P224
+<ul class="org-ul">
+<li>公式 (7.3)</li>
+<li id="高速 Cache">主存和 CPU 间</li>
+<li id="磁盘 Cache 的作用">弥补慢速磁盘和主存之间速度上的差异</li>
+</ul></li>
+<li>P227
+<dl class="org-dl">
+<dt>CD-ROM</dt><dd>只读型光盘</dd>
+<dt>WORM</dt><dd>一次写多次读的光盘</dd>
+<dt>CD-R</dt><dd>一次写永久读的光盘</dd>
+<dt>CD-RW</dt><dd>可重写光盘</dd>
+</dl></li>
+<li>P230-237
+<dl class="org-dl">
+<dt>显示设备</dt><dd>以可见光的形式传递和处理信息的设备称为显示设备</dd>
+<dt>VGA 显示标准</dt><dd>可以兼容字符和图形两种显示方式.</dd>
+<dt>(no term)</dt><dd>与显示器输出相比, 打印输出可产生永久性记录, 因此打印设备又称为 <b>硬拷贝设备</b></dd>
+</dl></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org886ed0c" class="outline-2">
+<h2 id="org886ed0c"><span class="section-number-2">11.</span> Chp8 输入/输出系统</h2>
+<div class="outline-text-2" id="text-11">
+<ul class="org-ul">
+<li>P241-242
+<ul class="org-ul">
+<li>接口的作用
+<dl class="org-dl">
+<dt>命令口</dt><dd>接口内用于接收来自 CPU 等主控设备的控制命令的寄存器称为命令端口</dd>
+<dt>状态口</dt><dd>接口内用于向 CPU 报告 I/O 设备工作状态的寄存器称为状态端口或状态口</dd>
+<dt>数据口</dt><dd>接口内在外设和总线间交换数据的缓冲寄存器称为数据端口或数据口</dd>
+</dl></li>
+<li>IO 接口与外设间的数据传送方式, <b>并注意什么时候使用什么方法</b>:
+<ul class="org-ul">
+<li>无条件传送方式: 速度极慢/简单的外围设备</li>
+<li>异步传送方式: 慢速/中速的外围设备</li>
+<li>同步传送方式: 高速的外围设备</li>
+</ul></li>
+</ul></li>
+<li>P247
+<dl class="org-dl">
+<dt>程序查询方式</dt><dd>是利用程序控制实现 CPU 和外部设备之间的数据传送</dd>
+<dt>中断</dt><dd>是一种程序随机切换的方式, 有时也统称为异常</dd>
+<dt>(no term)</dt><dd>中断方式的典型应用:
+<ol class="org-ol">
+<li>实现 CPU 与外界进行信息交换的握手联络</li>
+<li>故障处理</li>
+<li>实时处理</li>
+<li>程序调度</li>
+<li>软中断</li>
+</ol></dd>
+</dl></li>
+<li>P260 DMA
+<dl class="org-dl">
+<dt>DMA 的基本概念</dt><dd>DMA(直接内存访问), 是一种完全由硬件执行的 I/O 交换的工作方式.</dd>
+<dt>(no term)</dt><dd>DMA 可以完成的四项基本操作
+<ol class="org-ol">
+<li>从外围设备发出 DMA 请求</li>
+<li>CPU 响应请求</li>
+<li>由 DMA 控制器对内存寻址</li>
+<li>向 CPU 报告 DMA 操作的结束</li>
+</ol></dd>
+<dt>(no term)</dt><dd>DMA 数据传送过程的 <b>三个</b> 阶段:
+<ol class="org-ol">
+<li>传送前预处理</li>
+<li>正式传送</li>
+<li>传送后处理</li>
+</ol></dd>
+</dl></li>
+<li>P268
+<ul class="org-ul">
+<li>通道的 <b>五项任务</b>:
+<ol class="org-ol">
+<li>接收 CPU 的 I/O 指令&#x2026;</li>
+<li>从储存器选取属于该通道程序的的通道指令&#x2026;</li>
+<li>组织外设和存储器之间进行数据传送&#x2026;</li>
+<li>从外围设备得到设备的状态信息&#x2026;</li>
+<li>将外设的中断请求和通道本身的中断请求, 按次序及时报告给 CPU&#x2026;</li>
+</ol></li>
+<li>通道的分类
+<ol class="org-ol">
+<li>选择通道(高速通道)</li>
+<li>多路通道
+<ul class="org-ul">
+<li>数组多路通道</li>
+<li>字节多路通道</li>
+</ul></li>
+</ol></li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: John Doe</p>
+<p class="date">Created: 2021-12-25 Sat 17:57</p>
+</div>
+</body>
+</html>
